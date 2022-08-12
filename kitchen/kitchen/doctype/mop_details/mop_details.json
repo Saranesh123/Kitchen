@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-08-10 17:13:41.762455",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "date_of_joining",
+  "salary",
+  "mode_of_payment",
+  "minimum",
+  "maximum",
+  "current_month_data",
+  "reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Name",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "name1.date_of_joining",
+   "fieldname": "date_of_joining",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Date of Joining",
+   "reqd": 1
+  },
+  {
+   "fieldname": "salary",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Salary",
+   "reqd": 1
+  },
+  {
+   "default": "Bank Transfer",
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Mode of Payment",
+   "options": "Cash\nUPI\nBank Transfer\nCheque",
+   "reqd": 1
+  },
+  {
+   "fieldname": "minimum",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Minimum",
+   "reqd": 1
+  },
+  {
+   "fieldname": "maximum",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Maximum",
+   "reqd": 1
+  },
+  {
+   "fieldname": "current_month_data",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Current Month Data"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Data",
+   "label": "Reason"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-08-11 13:26:52.514027",
+ "modified_by": "Administrator",
+ "module": "Kitchen",
+ "name": "MOP Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
