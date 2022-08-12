@@ -11,6 +11,7 @@
   "month",
   "column_break_2",
   "company",
+  "date",
   "section_break_4",
   "mop_details",
   "amended_from"
@@ -61,12 +62,17 @@
    "fieldtype": "Select",
    "label": "Month",
    "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-08-11 11:23:14.275502",
+ "modified": "2022-08-12 09:06:32.501840",
  "modified_by": "Administrator",
  "module": "Kitchen",
  "name": "MOP Log",
