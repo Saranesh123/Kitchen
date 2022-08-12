@@ -89,6 +89,7 @@ doctype_js = {"Packing Slip" : "kitchen/custom/js/packingslip.js",
 # Override standard doctype classes
 
 override_doctype_class = {
+    "Delivery Note": "kitchen.kitchen.custom.python.packing_slip.dn",
 	"Packing Slip": "kitchen.kitchen.custom.python.packing_slip.dn"
 }
 
