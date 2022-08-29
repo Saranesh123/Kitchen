@@ -1,0 +1,199 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-08-12 10:26:27.476218",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_detail_section",
+  "item_code",
+  "column_break_3",
+  "item_name",
+  "item_description",
+  "supplier_detail_section",
+  "default_supplier",
+  "default_supplier_currency",
+  "supplier_currency_exchange_rate",
+  "uom",
+  "column_break_9",
+  "proposed_supplier",
+  "proposed_supplier_currency",
+  "proposed_supplier_currency_exchange_rate",
+  "price_list",
+  "other_detail_section",
+  "rate",
+  "total_po_quantity",
+  "valid_from",
+  "column_break_14",
+  "proposed_rate",
+  "ordering_quantity",
+  "burden_section",
+  "burden",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Item Detail"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.item_code",
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.item_code",
+   "fetch_from": "item_code.description",
+   "fieldname": "item_description",
+   "fieldtype": "Data",
+   "label": "Item Description",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "supplier_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Supplier Detail"
+  },
+  {
+   "fieldname": "default_supplier",
+   "fieldtype": "Read Only",
+   "label": "Default Supplier"
+  },
+  {
+   "fieldname": "default_supplier_currency",
+   "fieldtype": "Data",
+   "label": "Default Supplier Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "proposed_supplier",
+   "fieldtype": "Link",
+   "label": "Proposed Supplier",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.proposed_supplier",
+   "fetch_from": "proposed_supplier.default_currency",
+   "fieldname": "proposed_supplier_currency",
+   "fieldtype": "Data",
+   "label": "Proposed Supplier Currency",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "other_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Rate & Quantity"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Read Only",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "proposed_rate",
+   "fieldtype": "Float",
+   "label": "Proposed Rate"
+  },
+  {
+   "fieldname": "ordering_quantity",
+   "fieldtype": "Int",
+   "label": "Ordering Quantity"
+  },
+  {
+   "fieldname": "burden_section",
+   "fieldtype": "Section Break",
+   "label": "Burden"
+  },
+  {
+   "fieldname": "burden",
+   "fieldtype": "Read Only",
+   "label": "Burden"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Recommendation Detail",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "supplier_currency_exchange_rate",
+   "fieldtype": "Data",
+   "label": "Default Supplier Currency Exchange Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "proposed_supplier_currency_exchange_rate",
+   "fieldtype": "Data",
+   "label": "Proposed Supplier Currency Exchange Rate",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item_code.purchase_uom",
+   "fieldname": "uom",
+   "fieldtype": "Data",
+   "label": "UOM",
+   "read_only": 1
+  },
+  {
+   "fieldname": "price_list",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Price List",
+   "options": "Price List",
+   "reqd": 1
+  },
+  {
+   "fieldname": "valid_from",
+   "fieldtype": "Date",
+   "label": "Valid From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_po_quantity",
+   "fieldtype": "Int",
+   "label": "Total PO Quantity",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-08-18 09:45:10.822252",
+ "modified_by": "Administrator",
+ "module": "Kitchen",
+ "name": "Recommendation Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

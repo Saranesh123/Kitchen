@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "RN-.####",
+ "creation": "2022-08-12 10:30:50.244583",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "project",
+  "column_break_3",
+  "creation_date",
+  "rn_type",
+  "built_type",
+  "section_break_5",
+  "recommendation_detail",
+  "total_burden",
+  "rn_status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": " ",
+   "fieldname": "rn_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "RN Type",
+   "options": "\nPermanent\nAdhoc",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Recommendation Note",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "recommendation_detail",
+   "fieldtype": "Table",
+   "label": "Recommendation Detail",
+   "options": "Recommendation Detail",
+   "reqd": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Read Only",
+   "label": "Creation Date"
+  },
+  {
+   "default": " ",
+   "fieldname": "built_type",
+   "fieldtype": "Select",
+   "label": "Built Type",
+   "options": "\nStandard\nCustom Built",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Draft",
+   "fieldname": "rn_status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Status",
+   "options": "Draft\nVerified\nApproved"
+  },
+  {
+   "default": "0.0",
+   "fieldname": "total_burden",
+   "fieldtype": "Float",
+   "label": "Total Burden",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-08-19 12:30:24.733357",
+ "modified_by": "Administrator",
+ "module": "Kitchen",
+ "name": "Recommendation Note",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
